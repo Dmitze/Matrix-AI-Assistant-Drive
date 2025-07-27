@@ -1,0 +1,55 @@
+{
+  "name": "matrix-ai-assistant-drive",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "```markdown\r # 🤖 Matrix AI Chatbot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest",
+    "test:unit": "jest tests/",
+    "test:basic": "node test-basic.js",
+    "test:detailed": "node test-detailed.js",
+    "test:enhanced": "node test-enhanced.js",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "format": "prettier --write src/",
+    "setup": "cp env.example .env && echo 'Файл .env створено. Відредагуйте його своїми налаштуваннями.'",
+    "docker:build": "docker build -t matrix-ai-bot .",
+    "docker:run": "docker-compose up -d",
+    "docker:stop": "docker-compose down"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dmitze/Matrix-AI-Assistant-Drive.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dmitze/Matrix-AI-Assistant-Drive/issues"
+  },
+  "homepage": "https://github.com/Dmitze/Matrix-AI-Assistant-Drive#readme",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "exceljs": "^4.4.0",
+    "express": "^5.1.0",
+    "googleapis": "^154.0.0",
+    "lodash": "^4.17.21",
+    "matrix-js-sdk": "^37.11.0",
+    "node-poppler": "^8.0.3",
+    "pdf-parse": "^1.1.1",
+    "pdfjs-dist": "^5.3.93",
+    "prom-client": "^15.1.3",
+    "redis": "^5.6.1",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "eslint": "^9.32.0",
+    "jest": "^30.0.5",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2"
+  }
+}
